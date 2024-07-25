@@ -29,8 +29,7 @@
     "scripts": {
         "test": "bun test",
         "build": "bun build.ts",
-        "lint": "biome lint",
-        "release": "npm run build && npm run test && npm publish --access public"
+        "lint": "biome lint"
     },
     "devDependencies": {
         "@biomejs/biome": "^1.8.3",
