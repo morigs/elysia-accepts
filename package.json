@@ -1,0 +1,48 @@
+{
+    "name": "elysia-accepts",
+    "description": "Elysia plugin for accept headers parsing and content negotiation",
+    "version": "1.0.0",
+    "author": {
+        "name": "Igor Morozov",
+        "url": "https://github.com/morigs",
+        "email": "morozov.ig.s@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/morigs/elysia-accepts"
+    },
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "./package.json": "./package.json",
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/cjs/index.js"
+        }
+    },
+    "bugs": "https://github.com/morigs/elysia-accepts/issues",
+    "homepage": "https://github.com/morigs/elysia-accepts",
+    "keywords": ["elysia", "accept", "negotiation"],
+    "license": "MIT",
+    "scripts": {
+        "test": "bun test",
+        "build": "bun build.ts",
+        "lint": "biome lint",
+        "release": "npm run build && npm run test && npm publish --access public"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.8.3",
+        "@types/bun": "latest",
+        "elysia": "^1.1.4",
+        "tsup": "^8.2.3"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0",
+        "elysia": "^1.1.4"
+    },
+    "dependencies": {
+        "@tinyhttp/accepts": "^2.2.2"
+    }
+}
