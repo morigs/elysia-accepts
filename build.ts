@@ -4,7 +4,12 @@ import { build, type Options } from "tsup";
 await $`rm -rf dist`;
 
 const tsupConfig: Options = {
-  entry: ["src/**/*.ts"],
+  entry: [
+    "src/**/*.ts",
+    "!src/**/__tests__/**",
+    "!src/**/*.test.*",
+    "!src/**/*.spec.*",
+  ],
   splitting: false,
   sourcemap: false,
   clean: true,
